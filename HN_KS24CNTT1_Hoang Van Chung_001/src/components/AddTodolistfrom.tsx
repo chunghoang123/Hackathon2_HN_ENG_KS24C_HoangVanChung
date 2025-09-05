@@ -22,7 +22,7 @@ export default function AddTodoForm({ onAdd }: Props) {
         placeholder=""
         onPressEnter={handleAdd}
       />
-      <Button type="primary" onClick={handleAdd}>
+      <Button type="primary" style={{backgroundColor:"#ef5366",border:"1px solid #ffffff"}} onClick={handleAdd}>
         Add Item
       </Button>
     </Space.Compact>

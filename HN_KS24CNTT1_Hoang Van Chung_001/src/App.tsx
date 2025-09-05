@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Card, Typography } from "antd";
 import AddTodoForm from "./components/AddTodolistfrom";
 import TodoList from "./components/ToDoList";
+
 import { Todo } from "./Types";
 
 const { Title } = Typography;
@@ -35,10 +36,11 @@ function App() {
   };
 
   return (  
-    <Card style={{ width: 400, margin: "50px auto", textAlign: "center" }}>
-      <Title level={2}>Todo List</Title>
-      <h1>Get things done,one item at a time</h1>
+    <Card style={{ width: 400, margin: "50px auto",backgroundColor:"#ef5366",color:"#ffffff" }}>
+      <Title level={2} style={{color:"#ffffff"}}>Todo List</Title>
+      <h1 style={{borderBottomColor:""}}>Get things done,one item at a time</h1>
       <TodoList todos={todos} onToggle={toggleTodo} onDelete={deleteTodo} onUpdate={updateTodo} />
+      <h1></h1>
       <h1>Add to the todo list</h1>
       <AddTodoForm onAdd={addTodo} />
     </Card>
