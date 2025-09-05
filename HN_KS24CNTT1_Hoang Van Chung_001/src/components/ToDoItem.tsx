@@ -1,5 +1,5 @@
 import { Checkbox, Input, Space, Button } from "antd";
-import { DeleteOutlined, EditOutlined, SaveOutlined } from "@ant-design/icons";
+import { DeleteOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import { Todo } from "../Types";
 
@@ -36,11 +36,6 @@ export default function TodoItem({ todo, onToggle, onDelete, onUpdate }: Props) 
       </Checkbox>
 
       <Space>
-        {isEditing ? (
-          <Button icon={<SaveOutlined />} onClick={handleSave} />
-        ) : (
-          <Button icon={<EditOutlined />} onClick={() => setIsEditing(true)} />
-        )}
         <Button danger icon={<DeleteOutlined />} onClick={() => onDelete(todo.id)} />
       </Space>
     </Space>

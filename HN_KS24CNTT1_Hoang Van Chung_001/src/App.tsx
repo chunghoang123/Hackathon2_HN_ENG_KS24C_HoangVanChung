@@ -37,7 +37,9 @@ function App() {
   return (  
     <Card style={{ width: 400, margin: "50px auto", textAlign: "center" }}>
       <Title level={2}>Todo List</Title>
+      <h1>Get things done,one item at a time</h1>
       <TodoList todos={todos} onToggle={toggleTodo} onDelete={deleteTodo} onUpdate={updateTodo} />
+      <h1>Add to the todo list</h1>
       <AddTodoForm onAdd={addTodo} />
     </Card>
   );

@@ -19,7 +19,7 @@ export default function AddTodoForm({ onAdd }: Props) {
       <Input
         value={value}
         onChange={(e) => setValue(e.target.value)}
-        placeholder="Add to the todo list"
+        placeholder=""
         onPressEnter={handleAdd}
       />
       <Button type="primary" onClick={handleAdd}>
